@@ -5,5 +5,30 @@
 <link type = "text/css" rel = "stylesheet" href = "Games.css" />
 </head>
 <body>
+<script>
+/*
+Heads or Tails game made by ExposedGun316
+*/
+var playGame = new function(){
+var userChoice = prompt("Do you choose Heads or Tails?");
+userChoice = userChoice.toLowerCase(); //Changes users input to question into lowercase.
+
+var headsOrTails = Math.random();
+	if(headsOrTails < 1){
+		headsOrTails === "heads"; //If Math.random() gives a number less than one the answer is heads.
+	}else{
+		headsOrTails === "tails";//If Maths.random() gives number more than 1 answer is tails.
+	}
+	
+	if(userChoice = headsOrTails){
+		document.write("You won!"); //If userChoice is equal to headsOrTails, user won.
+	}else{
+		document.write("Sorry, you lost :(");//Otherwise the computer wins.
+	}
+}
+playGame;	
+
+
+</script>
 </body>
 </html>
