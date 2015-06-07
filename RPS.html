@@ -5,5 +5,61 @@
 <link type = "text/css" rel = "stylesheet" href = "Games.css" />
 </head>
 <body>
+<script>
+var currentGame = 1;
+		
+		// Returns 0 for tie, 1 for user win, 2 for computer win or -1 for error.
+		function compare(userChoice, computerChoice)
+		{
+			if (userChoice == computerChoice)
+				return 0; // Tie
+				
+			if (userChoice == "rock")
+				return computerChoice == "scissors" ? 1 : 2;
+				
+			if (userChoice == "paper")
+				return computerChoice == "scissors" ? 2 : 1;
+				
+			if (userChoice == "scissors")
+				return computerChoice == "rock" ? 2 : 1;
+			
+			return -1;
+		};
+		
+		function playGame()
+		{
+			var userChoice = prompt ("Do you choose rock, paper or scissors?");
+			
+			if (userChoice === null) // The user clicked cancel, stop playing.
+				return;
+				
+			userChoice = userChoice.toLowerCase();
+			var computerChoice = Math.random();
+			
+			if (computerChoice < 0.34)
+				computerChoice = "rock";
+			else if (computerChoice <= 0.67)
+				computerChoice = "paper";
+			else
+				computerChoice = "scissors";
+			
+			var result = compare(userChoice, computerChoice);
+			var resultText = "There was an error with the match!";
+			
+			switch (result)
+			{
+				case 0: resultText = "The match was a draw"; break;
+				case 1: resultText = "You won!"; break;
+				case 2: resultText = "The computer won. :("; break;
+			}
+			
+			document.write("Result of game " + currentGame + ": " + resultText + "<br>");
+			
+			currentGame++;
+			playGame();
+		}
+		playGame();
+
+</script>
 </body>
 </html>
