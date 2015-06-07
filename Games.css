@@ -1,3 +1,42 @@
 body{
 	background-color:silver;
 }
+#footer{
+	text-align:center;
+}
+#RPS{
+	border-radius: 5px;
+    border: 2px solid #6495ED;
+    background-color: #BCD2EE;
+    height: 50px;
+    width: 120px;
+    margin: auto;
+    text-align: center;
+    box-shadow:5px 5px 5px black;
+    display: inline;
+    padding: 5px 90px 5px 90px; color: black;
+}
+#HoT{
+    border-radius: 5px;
+    border: 2px solid #6495ED;
+    background-color: #BCD2EE;
+    height: 50px;
+    width: 120px;
+    margin: auto;
+    text-align: center;
+    box-shadow:5px 5px 5px black;
+    display: inline;
+    padding: 5px 90px 5px 90px; color: black;
+}
+#DS{
+    border-radius: 5px;
+    border: 2px solid #6495ED;
+    background-color: #BCD2EE;
+    height: 50px;
+    width: 120px;
+    margin: auto;
+    text-align: center;
+    box-shadow:5px 5px 5px black;
+    display: inline;
+    padding: 5px 90px 5px 90px; color: black;
+}
